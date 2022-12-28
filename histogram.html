@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Generator</title>
+    <link rel="stylesheet" href="./histogram.css">
+    <script src="./calculate.js" type="text/javascript" defer></script>
+</head>
+<body onload="init()">
+    <section id="title">
+        <h1>Histogram Generator</h1>  
+    </section>
+    
+    <main id="stepOne">
+        <section id="instr1">
+            <p>Step 1: Upload your data file here</p>
+        </section>
+
+        <section id="fileBlock">
+            <input id="fileInput" type="file" name="file" />
+            <pre id="fileContent"></pre>
+        </section>
+    </main>
+    
+    <main id="stepTwo">
+        <section id="instr2">
+            <p>Step 2: Customize your lower bounds(ONLY NUMBERS)</p>
+        </section>
+
+        <section id="bounds">
+            <fieldset>
+                
+                <section id="allevels">
+                    
+                    <section id="maxlevel">
+                        <label for="max">Max:</label>
+                        <input name="max" id="max" type="text" value="100.00" maxlength="5"> <br>
+                        <p id="isValid"></p>
+                    </section>
+                    
+                    <section id="alevel">
+                        <label for="aplus">A+:</label>
+                        <input name="aplus" id="aplus" type="text" value="95.00" maxlength="5"> <br>
+    
+                        <label for="a">A:</label>
+                        <input name="a" id="a" type="text" VALUE="90.00" maxlength="5"> <br>
+    
+                        <label for="aminus">A-:</label>
+                        <input name="aminus" id="aminus" type="text" value="85.00" maxlength="5"> <br>
+                    </section>
+                    
+                    <section id="blevel">
+                        <label for="bplus">B+:</label>
+                        <input name="bplus" id="bplus" type="text" value="80.00" maxlength="5"> <br>
+    
+                        <label for="b">B:</label>
+                        <input name="b" id="b" type="text" value="75.00" maxlength="5"> <br>
+    
+                        <label for="bminus">B-:</label>
+                        <input name="bminus" id="bminus" type="text" value="70.00" maxlength="5"> <br>
+                    </section>
+    
+                    <section id="clevel">
+                        <label for="cplus">C+:</label>
+                        <input name="cplus" id="cplus" type="text" value="65.00" maxlength="5"> <br>
+    
+                        <label for="c">C:</label>
+                        <input name="c" id="c" type="text" value="60.00" maxlength="5"> <br>
+    
+                        <label for="cminus">C-:</label>
+                        <input name="cminus" id="cminus" type="text" value="55.00" maxlength="5"> <br>
+                    </section>
+
+                    <section id="others">
+                        <label for="d">D:</label>
+                        <input name="d" id="d" type="text" value="50.00" maxlength="5"> <br>
+        
+                        <label for="f">F:</label>
+                        <input name="f" id="f" type="text" value="0.00" maxlength="5"> <br>
+                        <p id="allFilled"></p>
+                    </section>
+                </section>
+            </fieldset>
+        </section>
+    </main>
+
+    <main id="stepThree">
+        <p id="instr3"></p>
+        <p id="titleThree"></p>
+        <canvas id="histogram" width="1550" height="300">
+            Canvas is not supported
+        </canvas>
+        <!-- <table id="histogram">
+            <tr>
+                <th>A+</th>
+                <td id="numAplus"></td>
+            </tr>
+            <tr>
+                <th>A</th>
+                <td id="numA"></td>
+            </tr>
+            <tr>
+                <th>A-</th>
+                <td id="numAminus"></td>
+            </tr>
+            <tr>
+                <th>B+</th>
+                <td id="numBplus"></td>
+            </tr>
+            <tr>
+                <th>B</th>
+                <td id="numB"></td>
+            </tr>
+            <tr>
+                <th>B-</th>
+                <td id="numBminus"></td>
+            </tr>
+            <tr>
+                <th>C+</th>
+                <td id="numCplus"></td>
+            </tr>
+            <tr>
+                <th>C</th>
+                <td id="numC"></td>
+            </tr>
+            <tr>
+                <th>C-</th>
+                <td id="numCminus"></td>
+            </tr>
+            <tr>
+                <th>D</th>
+                <td id="numD"></td>
+            </tr>
+            <tr>
+                <th>F</th>
+                <td id="numF"></td>
+            </tr>
+
+        </table> -->
+        <table id="stats">
+            <tr>
+                <th>Highest</th>
+                <td id="maxGrade">n/a</td>
+            </tr>
+            <tr>
+                <th>Lowest</th>
+                <td id="minGrade">n/a</td>
+            </tr>
+            <tr>
+                <th>Mean</th>
+                <td id="meanGrade">n/a</td>
+            </tr>
+            <tr>
+                <th>Median</th>
+                <td id="medianGrade">n/a</td>
+            </tr>
+        </table>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    background-color: #FDF1E6;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #695054;
+    font-size: 30px;
+    font-weight: light;
+    text-align: center;
+    padding-top: 2px;
+    border: 1px;
+    width:350px;
+    height:50px;
+    background: #D0D6E3;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#title {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(30px 10px 4px #96a0b6);
+    margin-bottom: 30px;
+}
+
+#stepOne {
+    margin-top: 20px;
+    display: flex;
+    gap:150px;
+    flex-direction: row;
+    border-radius: 5px 5px 5px 5px;
+    width:auto;
+    height: 70px;;
+    background: rgb(247, 246, 246);
+}
+
+#instr1, #instr2, #titleThree {
+    padding-left: 5%;
+    color: #695054;
+    font-size: 20px;
+}
+
+#instr3 {
+    color: #ee0a0ab7;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    left: 5%;
+}
+
+#fileBlock {
+    padding-top: 1%;
+    align-items: center;
+    text-align: center;
+    color: #695054;
+}
+
+fieldset{
+    border: 0;
+    width: 50%;
+    color: #695054;
+}
+
+#stepTwo {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+    /* border-radius: 5px 5px 5px 5px;
+    width:auto;
+    height: 200px;
+    background: rgb(247, 246, 246); */
+}
+
+#allevels {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    gap:80px;
+}
+
+#fileContent {
+    visibility: hidden;
+}
+
+#isValid, #allFilled {
+    color: #ee0a0ab7;
+    font-weight: bold;
+}
+
+#stats {
+    color: #695054;
+    text-align: left;
+    font-size: 20px;
+    border: 1px solid #695054;
+    border-collapse: separate;
+    column-gap: 2em;
+    position:relative;
+    left: 5%;
+}
+
+#stats th, #stats td {
+    border: 1px solid #695054;
+}
+
+td {
+    padding-left: 10px;
+}
+
+tr {
+    padding-bottom: 10px;
+}
+#titleThree {
+    margin-top: 50px;
+}
+#histogram {
+    border: 1px rgb(29, 29, 29);
+    color: #695054;
+    font-size: 20px;
+    background-color: rgb(247, 246, 246);
+    padding-left: 5%;
+}
